@@ -1,0 +1,10 @@
+project: savantenvs/yyjson
+target: yyjson_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/yyjson_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/yyjson_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/yyjson_fuzzer/yyjson_fuzzer.dict
+    timeout: 5

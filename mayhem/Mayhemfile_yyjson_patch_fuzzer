@@ -1,0 +1,7 @@
+project: savantenvs/yyjson
+target: yyjson_patch_fuzzer
+cmds:
+  - cmd: /mayhem/yyjson_patch_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/yyjson_patch_fuzzer/yyjson_patch_fuzzer.dict
+    timeout: 5
